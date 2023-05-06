@@ -26,7 +26,10 @@ help_text="<b>Super+Return:</b> Open terminal
 <b>Super+r:</b> Enter resize mode (use arrow keys to resize focused container)
 <b>Super+Shift+e:</b> Exit Sway
 <b>Super+l:</b> Open powermenu
-<b>Super+Shift+R:</b> Record a screencast"
+<b>Super+Shift+R:</b> Record a screencast
+<b>Super+Shift+B:</b> Toggle smart borders
+<b>Super+Pause:</b> Passthrough mode
+"
 
 # Rofi CMD
 rofi_cmd() {
