@@ -28,8 +28,7 @@ help_text="<b>Super+Return:</b> Open terminal
 <b>Super+l:</b> Open powermenu
 <b>Super+Shift+R:</b> Record a screencast
 <b>Super+Shift+B:</b> Toggle smart borders
-<b>Super+Pause:</b> Passthrough mode
-"
+<b>Super+Pause:</b> Passthrough mode"
 
 # Rofi CMD
 rofi_cmd() {
