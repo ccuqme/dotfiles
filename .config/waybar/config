@@ -3,7 +3,7 @@
     "spacing": 4, // Gaps between modules (4px)
     "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
     "modules-center": ["sway/window"],
-    "modules-right": ["custom/rpm-ostree_upgrade", "tray", "idle_inhibitor", "pulseaudio", "clock"],
+    "modules-right": ["custom/swarofi-updates", "tray", "idle_inhibitor", "pulseaudio", "clock"],
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -104,12 +104,13 @@
         "exec": "echo '{\"class\": \"recording\"}'",
         "exec-if": "pgrep wf-recorder"
     },
-    "custom/rpm-ostree_upgrade": {
+    "custom/swarofi-updates": {
         "format": "{}",
         "interval": 3600,
         "tooltip": "{}",
         "tooltip-ellipsis": 200,
-        "exec": "$HOME/.config/waybar/rpm-ostree_upgrade.sh",
-        "on-click": "$HOME/.config/rofi/rpm-ostree_updater/rpm-ostree_updater.sh"
+        "exec": "$HOME/.config/rofi/swarofi-updater/swarofi-applet.sh",
+        "on-click": "$HOME/.config/rofi/swarofi-updater/swarofi-updater.sh",
+        "signal": 8
     }
 }

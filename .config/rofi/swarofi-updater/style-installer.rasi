@@ -56,7 +56,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       650px;
+    width:                       1500px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -120,7 +120,7 @@ textbox-prompt-colon {
     text-color:                  inherit;
 }
 entry {
-    enabled:                     false;
+    enabled:                     true;
     background-color:            inherit;
     text-color:                  inherit;
     cursor:                      text;
@@ -155,11 +155,11 @@ case-indicator {
 /*****----- Listview -----*****/
 listview {
     enabled:                     true;
-    columns:                     2;
-    lines:                       5;
+    columns:                     1;
+    lines:                       10;
     cycle:                       true;
     dynamic:                     true;
-    scrollbar:                   false;
+    scrollbar:                   true;
     layout:                      vertical;
     reverse:                     false;
     fixed-height:                true;
@@ -243,7 +243,7 @@ element-text {
     highlight:                   inherit;
     cursor:                      inherit;
     vertical-align:              0.5;
-    horizontal-align:            0;
+    horizontal-align:            0.0;
 }
 
 /*****----- Mode Switcher -----*****/
@@ -305,3 +305,4 @@ error-message {
     background-color:            @background-colour;
     text-color:                  @foreground-colour;
 }
+

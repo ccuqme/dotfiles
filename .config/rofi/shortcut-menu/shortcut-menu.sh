@@ -24,7 +24,6 @@ help_text="<b>Super+Return:</b> Open terminal
 <b>Super+Shift+minus:</b> Move focused container to scratchpad
 <b>Super+minus:</b> Show next scratchpad window/hide focused scratchpad window
 <b>Super+r:</b> Enter resize mode (use arrow keys to resize focused container)
-<b>Super+Shift+e:</b> Exit Sway
 <b>Super+l:</b> Open powermenu
 <b>Super+Shift+R:</b> Record a screencast
 <b>Super+Shift+B:</b> Toggle smart borders

@@ -20,7 +20,6 @@ bindsym $mod+Return exec $term
 bindsym $mod+d exec $menu
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+c reload
-bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
 # Moving and resizing
 bindsym $mod+Left focus left
@@ -134,7 +133,7 @@ exec /usr/bin/xdg-user-dirs-update
 exec /usr/libexec/sway-systemd/assign-cgroups.py
 exec /usr/libexec/sway-systemd/session.sh --with-cleanup
 exec /usr/libexec/sway-systemd/wait-sni-ready && \
-    systemctl --user start sway-xdg-autostart.target
+systemctl --user start sway-xdg-autostart.target
 
 # Media player control
 bindsym --locked {
@@ -167,7 +166,7 @@ mode "passthrough" {
 bindsym $mod+Pause mode "passthrough"
 
 # Wallpaper
-output DP-1 bg /var/home/m/Pictures/Wallpapers/1329168.jpg fill
+
 
 # Output
 output DP-1 resolution 5440x1440 position 0,0
@@ -182,3 +181,22 @@ workspace 6 output DP-1
 workspace 7 output DP-1
 workspace 8 output DP-1
 workspace 9 output HDMI-A-1
+output DP-1 bg /var/home/m/Pictures/Wallpapers/2043676.jpg fill
+output HDMI-A-1 bg /var/home/m/Pictures/Wallpapers/2043676.jpg fill
+
+# Idle and lock configuration
+exec LT="$lock_timeout" ST="$screen_timeout" LT=${LT:-300} ST=${ST:-60} && \
+    swayidle -w \
+        timeout $((LT + ST)) 'swaymsg "output * power off"' \
+                      resume 'swaymsg "output * power on"'  \
+
+# Allow local root to connect to Xwayland.
+# Anaconda runs elevated and will fail to start without that.
+exec xhost si:localuser:root
+
+# Mouse settings
+input 1133:16505:Logitech_G_Pro {
+    natural_scroll disabled
+    accel_profile "flat"
+    pointer_accel -0.4
+}
